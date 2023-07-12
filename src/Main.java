@@ -1,17 +1,39 @@
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
+//- Задача
+//
+//        Напишите метод , который разворачивает исходный массив.
+//
+//        Ожидаемый результат: метод принимает на вход массив и возвращает на выходе массив такой же длины, но с элементами в противоположном порядке от исходного
+//
+//        Пример:
+//
+//        на входе - {1, 2 ,3}
+//
+//        на выходе - {3, 2, 1}- Задача
+//
+//        Напишите метод , который разворачивает исходный массив.
+//
+//        Ожидаемый результат: метод принимает на вход массив и возвращает на выходе массив такой же длины, но с элементами в противоположном порядке от исходного
+//
+//        Пример:
+//
+//        на входе - {1, 2 ,3}
+//
+//        на выходе - {3, 2, 1}
 public class Main {
     public static void main(String[] args) {
-        int[] massiv = new int[]{1, 2, 3};
-        System.out.println("reverseMassive(massiv) = " + Arrays.toString((reverseMassive(massiv))));
+        int[] arr = new int[]{1, 2, 3};
+        System.out.println("reverseArr(arr) = " + Arrays.toString(reverseArr(arr)));
     }
 
-    public static int[] reverseMassive(int[] massiv) {
-        int[] reverseMassive = new int[massiv.length];
-        for (int i = 0; i < massiv.length; i++) {
-            reverseMassive[i] = massiv[massiv.length - i - 1];
+    private static int[] reverseArr(int[] arr) {
+        int[] reverseArray = new int[arr.length];
+        for (int i = 0; i < reverseArray.length; i++) {
+            reverseArray[i] = arr[reverseArray.length - i - 1];
         }
-        return reverseMassive;
+        return reverseArray;
     }
+
 }
